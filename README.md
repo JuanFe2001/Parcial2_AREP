@@ -12,7 +12,8 @@ Diseñe un prototipo de sistema de microservicios que tenga un servicio (En la f
   ## Pasos Para Ejecucion (En consola):
   - En consola nos vamos a la carpeta Parcial2 del proyecto
 - Una vez alli compilamos el proyecto con el siguiente comando:
--   ``` 
+  
+  ``` 
   mvn clean install
   ```
   - Luego ejecutamos el servicio con los siguientes comando:
