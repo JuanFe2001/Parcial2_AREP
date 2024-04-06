@@ -13,6 +13,9 @@ import java.net.URL;
 import static spark.Spark.*;
 
 public class ServiceProxy {
+    
+    
+    
 
     public static void main(String[] args) {
         startServer();
@@ -46,7 +49,7 @@ public class ServiceProxy {
     private static void configureLinearSearchRoute() {
         get("/linear-search", (req, res) -> {
             res.type("application/json");
-            String output = invokeRemoteService("http://localhost:4500/linear-search?" + req.queryString());
+            String output = invokeRemoteService("http://ec2-54-166-183-43.compute-1.amazonaws.com:4500/linear-search?" + req.queryString());
             return output;
         });
     }
@@ -54,7 +57,7 @@ public class ServiceProxy {
     private static void configureBinarySearchRoute() {
         get("/binary-search", (req, res) -> {
             res.type("application/json");
-            String output = invokeRemoteService("http://localhost:4500/binary-search?" + req.queryString());
+            String output = invokeRemoteService("http://ec2-54-167-24-40.compute-1.amazonaws.com:4500/binary-search?" + req.queryString());
             return output;
         });
     }
